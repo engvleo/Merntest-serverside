@@ -22,7 +22,9 @@ mongoose.connect(url)
     console.log(err);
   }); 
 //=======================================================================
-
+app.get('/',(req,res)=>{
+  res.send({message:"hi from server /"})
+})
 //=====router===========
 app.get('/view',(req,res)=>{
     Friends.find({},(err,result)=>{
