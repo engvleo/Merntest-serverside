@@ -14,7 +14,7 @@ const mongoose = require('mongoose');
 const url="mongodb+srv://jeem:jeemdb@cluster0.wy1fx.mongodb.net/MernTest?retryWrites=true&w=majority"
 mongoose.connect(url)
   .then( result => {
-    app.listen(process.env.port || 5000,function(){
+    app.listen(process.env.PORT || 5000,function(){
         console.log('hi server is on')
     });
   })
